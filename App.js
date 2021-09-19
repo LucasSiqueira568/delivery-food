@@ -9,6 +9,7 @@ import Register from './src/components/Register'
 import Home from './src/components/Home'
 import Details from './src/components/Details'
 import Profiler from './src/components/Profiler'
+import Comprar from './src/components/Compra'
 import Main from './src/components/Main'
 
 const Stack = createNativeStackNavigator();
@@ -16,7 +17,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer style={styles.container}>
-      <Stack.Navigator initialRouteName="Register" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName="Detail" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Login" component={Login} header />
         <Stack.Screen name="Register" component={Register} />
         <Stack.Screen name="Home" component={Home} />

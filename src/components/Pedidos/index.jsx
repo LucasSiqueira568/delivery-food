@@ -1,14 +1,21 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-// import { Container } from './styles';
+import ListProducts from '../pages/ListProducts'
 
-const Pedidos = () => {
+export default function Pedidos(props) {
     return (
-    <View >
-        <Text>Pedidos</Text>
-    </View>
+        <View style={{ marginTop: 20 }} >
+            <Text
+                style={{ fontSize: 18, marginTop: 20, color: '#000' }}
+            >Meus Pedidos</Text>
+
+            <View>
+                <ListProducts />
+                <ListProducts />
+                <ListProducts />
+                <ListProducts />
+            </View>
+        </View>
     );
 }
-
-export default Pedidos;

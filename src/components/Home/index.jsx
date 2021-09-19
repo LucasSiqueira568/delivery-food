@@ -11,43 +11,45 @@ export default function Home(props) {
 
         <ScrollView >
             <View style={styles.container}>
-                <View style={styles.title}>
-                    <Text
-                        style={{
-                            color: "#000",
-                            fontSize: 18,
-                            marginLeft: 15,
-                            alignItems: "center"
-                        }}
-                    >Delivery Food <MaterialIcons name="keyboard-arrow-down" size={24} color="white" />
-                    </Text>
+                <View style={{ backgroundColor: 'orange' }}>
+                    <View style={styles.title}>
+                        <Text
+                            style={{
+                                color: "#FFF",
+                                fontSize: 18,
+                                marginLeft: 15,
+                                alignItems: "center"
+                            }}
+                        >Delivery Food <MaterialIcons name="keyboard-arrow-down" size={24} color="#FFF" />
+                        </Text>
 
-                    <TouchableOpacity style={{ marginRight: 15 }}>
-                        <MaterialCommunityIcons name="bell-outline" size={24} color="black" />
-                    </TouchableOpacity>
+                        <TouchableOpacity style={{ marginRight: 15 }}>
+                            <MaterialCommunityIcons name="bell-outline" size={24} color="black" />
+                        </TouchableOpacity>
 
-                </View>
-                <View style={styles.search}>
+                    </View>
+                    <View style={styles.search}>
 
-                    <TouchableOpacity style={styles.searchButton}>
-                        <Ionicons name="search" size={24} color="grey" />
-                    </TouchableOpacity>
+                        <TouchableOpacity style={styles.searchButton}>
+                            <Ionicons name="search" size={24} color="grey" />
+                        </TouchableOpacity>
 
-                    <TextInput
-                        style={styles.input}
-                        placeholder="Pesquisar"
+                        <TextInput
+                            style={styles.input}
+                            placeholder="Pesquisar"
 
-                    />
-                    <TouchableOpacity style={styles.barsButton}>
-                        <AntDesign name="bars" size={24} color="grey" />
-                    </TouchableOpacity>
+                        />
+                        <TouchableOpacity style={styles.barsButton}>
+                            <AntDesign name="bars" size={24} color="grey" />
+                        </TouchableOpacity>
+                    </View>
                 </View>
 
                 <View>
                     <Text
-                        style={{ fontSize: 18, marginLeft: 15 }}
+                        style={{ fontSize: 18, marginLeft: 15, marginTop: 15 }}
                     >Destaques</Text>
-                    <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+                    <ScrollView horizontal={true} >
                         <Card
                             url={require('../../assets/hamburguer_churrasco.jpg')}
                             name="Hambúrguer X-Tudo"
@@ -79,8 +81,11 @@ export default function Home(props) {
 
                     </ScrollView>
                 </View>
-                <View style={{ marginTop: 30, }}>
-                    <Text style={{ fontSize: 18, marginLeft: 15 }}>Recomendados</Text>
+                <View style={{ marginTop: 30, position: "relative" }}>
+                    <View style={{ position: 'absolute', top: 30 }}>
+                        <Text style={{ fontSize: 18, left: 15, bottom: 60, color: '#000' }}
+                        >Recomendados</Text>
+                    </View>
                     <ListProducts
                         url={require('../../assets/hamburguer_caseiro.jpg')}
                         subtitle="R$ 32,99"

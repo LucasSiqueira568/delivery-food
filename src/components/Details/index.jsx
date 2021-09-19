@@ -6,6 +6,7 @@ import { SimpleLineIcons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 
 import ListProducts from '../pages/ListProducts'
+import Compra from '../Compra'
 
 export default function Detail(props) {
 
@@ -58,27 +59,14 @@ export default function Detail(props) {
                     >R$ 35,99</Text>
                 </View>
                 <View style={{ marginTop: 15 }}>
-                    <Text style={{ fontSize: 18, marginLeft: 15 }}>Relacionados</Text>
+                    <Text style={{ fontSize: 18, marginLeft: 15 }}>Ingredientes</Text>
                     <ListProducts
                         url={require('../../assets/hamburguer_churrasco.jpg')}
                         subtitle="R$ 30,99"
                         onPress={() => props.navigation.navigate("Detail")}
                     />
-                    <ListProducts
-                        url={require('../../assets/hamburguer_churrasco.jpg')}
-                        subtitle="R$ 30,99"
-                        onPress={() => props.navigation.navigate("Detail")}
-                    />
-                    <ListProducts
-                        url={require('../../assets/hamburguer_churrasco.jpg')}
-                        subtitle="R$ 30,99"
-                        onPress={() => props.navigation.navigate("Detail")}
-                    />
-                    <ListProducts
-                        url={require('../../assets/hamburguer_churrasco.jpg')}
-                        subtitle="R$ 30,99"
-                        onPress={() => props.navigation.navigate("Detail")}
-                    />
+              
+                  <Compra />
                 </View>
             </View>
         </View>
