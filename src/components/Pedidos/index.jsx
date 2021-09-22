@@ -1,21 +1,29 @@
-import React from 'react';
-import { Text, View } from 'react-native';
+import React from "react";
+import { Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-import ListProducts from '../pages/ListProducts'
+import ListProducts from "../pages/ListProducts";
 
 export default function Pedidos(props) {
-    return (
-        <View style={{ marginTop: 20 }} >
-            <Text
-                style={{ fontSize: 18, marginTop: 20, color: '#000' }}
-            >Meus Pedidos</Text>
+  return (
+    <SafeAreaView>
+      <Text
+        style={{
+          fontSize: 18,
+          marginLeft: 15,
+          marginTop: 10,
+          marginBottom: 10,
+        }}
+      >
+        Meus Pedidos
+      </Text>
 
-            <View>
-                <ListProducts />
-                <ListProducts />
-                <ListProducts />
-                <ListProducts />
-            </View>
-        </View>
-    );
+      <View>
+        <ListProducts />
+        <ListProducts />
+        <ListProducts />
+        <ListProducts />
+      </View>
+    </SafeAreaView>
+  );
 }
