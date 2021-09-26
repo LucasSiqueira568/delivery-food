@@ -9,15 +9,14 @@ import { Octicons } from '@expo/vector-icons';
 
 // import dos componentes
 import Home from '../Home'
-import Profiler from '../Profiler'
 import Busca from '../Busca'
+import StatusPedido from '../StatusPedido'
 import Pedidos from '../Pedidos'
-import Plus from '../Plus'
 import Notifications from '../Notifications'
 
 const Tab = createBottomTabNavigator(); 
 
-export default function ProfilerUser() {
+export default function ProfilerUser(props) {
   return (
               <Tab.Navigator screenOptions={{ 
                 headerShown: false,
@@ -55,7 +54,8 @@ export default function ProfilerUser() {
                       )
                   }}
                   />
-                  <Tab.Screen name="Plus" component={Plus}
+                  <Tab.Screen name="StatusPedido" component={StatusPedido}
+                  // onPress={() => navigation.navigate("StatusPedido")}
                   options={{
                       tabBarIcon: ({size}) => (
                         <TouchableOpacity>

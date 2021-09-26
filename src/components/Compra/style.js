@@ -1,55 +1,68 @@
-import styled from 'styled-components/native'
+import { StyleSheet } from 'react-native'
+
+const styles = StyleSheet.create({
+    Container: {
+        // flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: 400,
+        height: 320,
+        backgroundColor: 'blue'
+    },
+
+    ButtonAddCarrinho: {
+        backgroundColor: '#e9ecef',
+        marginBottom: 70,
+        marginTop: 10,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: 300,
+        height: 60,
+        borderRadius: 10,
+        color: 'orange',
+    },
+    ContainerButtons: {
+        flexDirection: 'row', 
+        width: 400,
+        height: 80,
+        marginTop: 40,
+        bottom: 5,
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        backgroundColor: 'red',
+        position: 'absolute'
+    },
+    ButtonAddProduct: {
+        backgroundColor: '#e9ecef',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginLeft: 15,
+        width: 140,
+        height: 50,
+        borderRadius: 10,
+
+    },
+
+    ButtonFinishPedido: {
+        backgroundColor: '#006d77',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginRight: 15,
+        width: 200,
+        height: 50,
+        borderRadius: 10,
+    },
+
+    Title: {
+        fontSize: 16,
+        color: 'orange',
+        margin: 3,
+    }
 
 
-export const Container = styled.View`
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-`
+});
 
-export const ButtonAddCarrinho = styled.TouchableOpacity`
-    background-color: #e9ecef;
-    margin-bottom: 10;
-    margin-top: 10px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 60px;
-    border-radius: 10px;
-    color: orange;
-
-`
-
-export const ButtonAddProduct = styled.View`
-    background-color: #e9ecef;
-    margin-bottom: 10;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
-    width: 140px;
-    height: 60px;
-    border-radius: 10px;
-` 
-
-export const ButtonFinishPedido = styled.View`
-    background-color: #006d77;
-    margin-bottom: 10;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-    width: 200px;
-    height: 60px;
-    border-radius: 10px;
-
-
-`
-
-export const Title = styled.Text`
-    font-size: 16px;
-    color: orange;
-    margin: 3px;
-
-`
+export default styles;

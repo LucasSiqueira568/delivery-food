@@ -1,41 +1,49 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Button } from 'react-native'
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native'
 import { SimpleLineIcons } from '@expo/vector-icons';
-import {
-    ButtonAddProduct,
-    Title,
-    ButtonAddCarrinho,
-    Container,
-    ButtonFinishPedido
-} from './style'
+import styles from './style'
 
+import SelectionBebidas from '../pages/SelectionBebidas'
 export default function Compra(props) {
 
     const [qtdProduct, setqtdProduct] = useState(1);
     const valor = 35.99;
     return (
-        <Container>
-            <ButtonAddCarrinho>
-                <SimpleLineIcons name="plus" size={20} color="orange" />
-                <Title>Adicionar ao carrinho</Title>
-            </ButtonAddCarrinho>
+        <View style={styles.Container}>
+            <ScrollView style={{ backgroundColor: 'red', marginBottom: 10 }}>
+                <View style={{ backgroundColor: 'grey', width: 400, height: 70 }}>
+                    <Text style={{ fontWeight: 'bold', fontSize: 18, marginLeft: 15 }}>Escolha sua Bebida</Text>
+                    <Text style={{ marginLeft: 15 }}>0 de 1</Text>
+                    <View>
+                        <SelectionBebidas
+                            title="Pepsi"
+                            onPress={() => { }}
+                        />
+                        <SelectionBebidas
+                            title="Coca-Cola"
+                            onPress={() => { }}
+                        />
+                    </View>
+                </View>
 
-            <View style={{ flexDirection: 'row', width: 400, justifyContent: 'space-between' }}>
-                <ButtonAddProduct>
+            </ScrollView>
+
+            <View style={styles.ContainerButtons}>
+                <View style={styles.ButtonAddProduct}>
                     <SimpleLineIcons name="minus" size={25} color="orange"
                         onPress={() => setqtdProduct(qtdProduct - 1)}
                     />
-                    <Title style={{ padding: 5, fontSize: 25 }}>{qtdProduct}</Title>
+                    <Text style={{ padding: 20, fontSize: 19 }}>{qtdProduct}</Text>
                     <SimpleLineIcons name="plus" size={25} color="orange"
                         onPress={() => setqtdProduct(qtdProduct + 1)}
                     />
-                </ButtonAddProduct>
+                </View>
 
-                <ButtonFinishPedido>
-                    <Title style={{ color: 'white' }}>
-                        Comprar por R$ {setqtdProduct ? qtdProduct * valor.toFixed(2) : valor.toFixed(2)}</Title>
-                </ButtonFinishPedido>
+                <View style={styles.ButtonFinishPedido}>
+                    <Text style={{ color: 'white' }}>
+                        Comprar por R$ {setqtdProduct ? qtdProduct * valor.toFixed(2) : valor}</Text>
+                </View>
             </View>
-        </Container>
+        </View>
     )
 }
