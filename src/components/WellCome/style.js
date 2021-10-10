@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   wellcomeTitle: {
     color: "white",
     fontSize: 30,
-    left: 20,
+    textAlign: "center",
     fontWeight: "bold",
   },
   button: {

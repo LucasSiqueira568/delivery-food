@@ -62,7 +62,7 @@ function WellCome(props) {
           style={styles.button}
           onPress={() => props.navigation.navigate("Register")}
         >
-          <Text style={styles.buttonTitle}>Vamos começar</Text>
+          <Text style={styles.buttonTitle}>Vamos começar?</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => props.navigation.navigate("Login")}>
           <Text style={{ color: "white", marginLeft: 20, textAlign: "center" }}>

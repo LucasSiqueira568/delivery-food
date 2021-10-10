@@ -9,10 +9,10 @@ import { MotiView } from "moti";
 
 function WellCome(props) {
   return (
-    <SafeAreaView style={{alignItems: 'center'}}>
+    <SafeAreaView style={styles.container}>
       <Image
         style={styles.image}
-        source={require("../../assets/delivery3.png")}
+        source={require("../../assets/background-3.png")}
       />
 
       <MotiView
@@ -31,14 +31,23 @@ function WellCome(props) {
         }}
       >
         <Text style={styles.wellcomeTitle}>
-          Bem-vindo a melhor lanchonete do Pará
+          Uma lanchonete feita com o melhor da nossa terra
         </Text>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => props.navigation.navigate("WellCome")}
-        >
-          <Text style={styles.buttonTitle}>Próximo</Text>
-        </TouchableOpacity>
+
+        <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => props.navigation.navigate("WellComeTwo")}
+          >
+            <Text style={styles.buttonTitle}>Voltar</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => props.navigation.navigate("WellCome")}
+          >
+            <Text style={styles.buttonTitle}>Próximo</Text>
+          </TouchableOpacity>
+        </View>
       </MotiView>
     </SafeAreaView>
   );

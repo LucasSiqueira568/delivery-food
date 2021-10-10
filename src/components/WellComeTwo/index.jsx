@@ -9,10 +9,10 @@ import { MotiView } from "moti";
 
 function WellCome(props) {
   return (
-    <SafeAreaView style={{alignItems: 'center'}}>
+    <SafeAreaView style={styles.container}>
       <Image
         style={styles.image}
-        source={require("../../assets/delivery2.png")}
+        source={require("../../assets/background-2.png")}
       />
 
       <MotiView
@@ -31,7 +31,7 @@ function WellCome(props) {
         }}
       >
         <Text style={styles.wellcomeTitle}>
-          Bem-vindo a melhor lanchonete do Pará
+          Agora está bem pertinho de você
         </Text>
         <TouchableOpacity
           style={styles.button}

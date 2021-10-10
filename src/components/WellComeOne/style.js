@@ -1,6 +1,9 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   image: {
     width: '100%',
     height: 400,
@@ -19,12 +22,13 @@ const styles = StyleSheet.create({
     height: 300,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: 'red'
+    // backgroundColor: 'red'
   },
   wellcomeTitle: {
     color: "#000",
     fontSize: 30,
-    left: 20,
+    // left: 20,
+    textAlign: "center",
     fontWeight: "bold",
   },
   button: {
